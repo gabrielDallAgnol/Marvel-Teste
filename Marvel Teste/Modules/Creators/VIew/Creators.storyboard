@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kla-Sy-pMb">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Creators-->
+        <scene sceneID="ZQV-6i-AiU">
+            <objects>
+                <navigationController id="Kla-Sy-pMb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Creators" id="hGI-WA-0p2"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Upw-gj-39x">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rLc-Ec-ypV" kind="relationship" relationship="rootViewController" id="ghl-Nr-PIS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f9y-ry-c5D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-525" y="147"/>
+        </scene>
+        <!--Creators-->
+        <scene sceneID="FfK-Io-dsa">
+            <objects>
+                <viewController id="rLc-Ec-ypV" customClass="CreatorsController" customModule="Marvel_Teste" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fvd-ct-wII">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f7P-bP-s2V">
+                                <rect key="frame" x="0.0" y="144" width="414" height="669"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="4UH-Db-VKW">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="f7P-bP-s2V" firstAttribute="leading" secondItem="wWl-xD-kXF" secondAttribute="leading" id="72e-fb-YSl"/>
+                            <constraint firstItem="4UH-Db-VKW" firstAttribute="top" secondItem="wWl-xD-kXF" secondAttribute="top" id="QrO-lf-shV"/>
+                            <constraint firstItem="f7P-bP-s2V" firstAttribute="bottom" secondItem="wWl-xD-kXF" secondAttribute="bottom" id="RE4-WQ-Qxf"/>
+                            <constraint firstItem="f7P-bP-s2V" firstAttribute="top" secondItem="4UH-Db-VKW" secondAttribute="bottom" id="gpg-NM-gg7"/>
+                            <constraint firstItem="4UH-Db-VKW" firstAttribute="leading" secondItem="wWl-xD-kXF" secondAttribute="leading" id="oej-9F-58z"/>
+                            <constraint firstItem="f7P-bP-s2V" firstAttribute="trailing" secondItem="wWl-xD-kXF" secondAttribute="trailing" id="q1B-x4-pIN"/>
+                            <constraint firstItem="4UH-Db-VKW" firstAttribute="trailing" secondItem="wWl-xD-kXF" secondAttribute="trailing" id="v4T-lU-sA8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wWl-xD-kXF"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Creators" id="Jpk-X2-gRI"/>
+                    <connections>
+                        <outlet property="searchBar" destination="4UH-Db-VKW" id="wfh-WK-lpe"/>
+                        <outlet property="tableView" destination="f7P-bP-s2V" id="Lvs-2k-tZv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yyK-x7-eOg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="276.81159420289856" y="146.65178571428569"/>
+        </scene>
+    </scenes>
+</document>

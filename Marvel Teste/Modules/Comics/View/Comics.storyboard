@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X1n-b5-lm3">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Comics-->
+        <scene sceneID="ymw-Dx-M0J">
+            <objects>
+                <navigationController id="X1n-b5-lm3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Comics" id="CEw-nV-ZDZ"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9wA-Lk-pba">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="HLM-hg-Ajs" kind="relationship" relationship="rootViewController" id="Ehh-vf-g5j"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R9S-Ma-E8A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-525" y="147"/>
+        </scene>
+        <!--Comics-->
+        <scene sceneID="Bfs-zI-RAy">
+            <objects>
+                <viewController id="HLM-hg-Ajs" customClass="ComicsController" customModule="Marvel_Teste" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yZb-C7-BJe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SiV-13-fV0">
+                                <rect key="frame" x="0.0" y="144" width="414" height="669"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="4cp-iA-Oqd">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SiV-13-fV0" firstAttribute="trailing" secondItem="Put-ko-PXN" secondAttribute="trailing" id="2uK-OG-KPE"/>
+                            <constraint firstItem="SiV-13-fV0" firstAttribute="leading" secondItem="Put-ko-PXN" secondAttribute="leading" id="JiN-Mh-VWP"/>
+                            <constraint firstItem="4cp-iA-Oqd" firstAttribute="leading" secondItem="Put-ko-PXN" secondAttribute="leading" id="OpO-7k-N5x"/>
+                            <constraint firstItem="SiV-13-fV0" firstAttribute="bottom" secondItem="Put-ko-PXN" secondAttribute="bottom" id="VGV-kt-qGE"/>
+                            <constraint firstItem="4cp-iA-Oqd" firstAttribute="top" secondItem="Put-ko-PXN" secondAttribute="top" id="Xap-Nh-pPC"/>
+                            <constraint firstItem="SiV-13-fV0" firstAttribute="top" secondItem="4cp-iA-Oqd" secondAttribute="bottom" id="twh-jR-Fwo"/>
+                            <constraint firstItem="4cp-iA-Oqd" firstAttribute="trailing" secondItem="Put-ko-PXN" secondAttribute="trailing" id="yGR-r0-jiX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Put-ko-PXN"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Comics" id="PsP-1c-rmi"/>
+                    <connections>
+                        <outlet property="searchBar" destination="4cp-iA-Oqd" id="Ge1-yN-PTP"/>
+                        <outlet property="tableView" destination="SiV-13-fV0" id="uJT-K4-rj5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C87-Px-Rps" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="276.81159420289856" y="146.65178571428569"/>
+        </scene>
+    </scenes>
+</document>
